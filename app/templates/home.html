@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="main">
+
+      <div class="content">
+        <div class="signup-form">
+          <form id="signup">
+            <h1 class="form-header">Sign Up</h1>
+
+            <div class="fields">
+              <label class="top-label" for="name">Name</label>
+              <input type="text" placeholder="Name" id="name" required>
+
+              <label class="top-label" for="email">Email</label>
+              <input type="email" placeholder="Email" id="email" required>
+
+              <label class="top-label" for="password">Password</label>
+              <input type="password"
+                     placeholder="Password"
+                     title="Please include at least one uppercase letter, one lowercase letter, one number and two non-alphanumeric characters."
+                     pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-].*?[#?!@$%^&*-]).{5,}$"
+                     id="password" required>
+
+              <label class="top-label" for="password-confirm">Confirm Password</label>
+              <input type="password" placeholder="Confirm Password" id="password-confirm" required>
+            </div>
+
+            <br>
+
+            <div class="checkboxes">
+              <label class="top-label">Where'd you hear about us?</label>
+              <input type="checkbox" name="reference" id="friend" required>
+              <label class="side-label" for="friend">Friend</label>
+              <input type="checkbox" name="reference" id="stranger" required>
+              <label class="side-label" for="stranger">Stranger</label>
+              <input type="checkbox" name="reference" id="foe" required>
+              <label class="side-label" for="foe">Foe</label>
+              <input type="checkbox" name="reference" id="other" onchange="showTextarea()" required>
+              <label class="side-label" for="other">Other</label>
+            </div>
+
+            <div class="other-explain">
+              <label class="top-label">Explain:</label>
+              <textarea id="other-text" required></textarea>
+            </div>
+
+            <div class="radios">
+              <label class="top-label">What is your account type?</label>
+              <input type="radio" name="account-type" id="useless" required>
+              <label class="side-label" for="useless">Uselessly Simple</label>
+              <input type="radio" name="account-type" id="workable" required>
+              <label class="side-label" for="workable">Workable</label>
+              <input type="radio" name="account-type" id="challenging" required>
+              <label class="side-label" for="challenging">Challenging</label>
+              <input type="radio" name="account-type" id="hard" required>
+              <label class="side-label" for="hard">Uncompromisingly Complex</label>
+            </div>
+
+            <div class="buttons">
+              <input type="checkbox" id="tac" required>
+              <label for="tac" class="side-label">I accept the terms</label>
+              <button class="button-right" onclick="resetForm()">Reset</button>
+              <input class="button-right" type="submit">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="sidebar"></div>
+    </div>
+    <div class="footer"></div>
+  </body>
+
+  <script src="/static/home.js" type="text/javascript"></script>
+
+</html>

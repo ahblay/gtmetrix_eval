@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  text-align: center;
+  height: 100%;
+}
+
+.header {
+  background-color: #1b1b1b;
+  height: 40px;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1060px;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: gray;
+  width: 260px;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #1b1b1b;
+  height: 20px;
+  padding: 20px;
+}
+
+/* reformats website on smaller screens */
+@media only screen and (max-width:700px) {
+  .content, .sidebar {
+    width: 100%;
+    flex-grow: 0;
+    box-sizing: border-box;
+  }
+  .main {
+    display: block;
+  }
+}
+
+/* form styling */
+.signup-form {
+  width: 60%;
+  border: 1px solid #383838;
+  border-radius: 3px;
+  background-color: #383838;
+  color: white;
+  padding: 20px 40px 20px 20px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin: 0px 10px 0px 0px;
+}
+
+.side-label {
+  position: relative;
+  float: left;
+}
+
+.top-label {
+  float: left;
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+input[type=checkbox], input[type=radio] {
+  float: left;
+  clear: both;
+}
+
+.fields {
+  width: 100%;
+}
+
+.checkboxes {
+  width: 100%;
+  display: inline-block;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.radios {
+  width: 100%;
+  display: inline-block;
+}
+
+.buttons {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button-right {
+  float: right;
+}
+
+.other-explain {
+  display: none;
+  float: left;
+  width: 100%;
+}
+
+#other:checked ~ .other-explain {
+  display: inline-block;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+  text-align: left;
+  padding-top: 5px;
+  font-size: 13px;
+  clear: left;
+}
+
+.greeting {
+  padding-bottom: 20px;
+}
+
+

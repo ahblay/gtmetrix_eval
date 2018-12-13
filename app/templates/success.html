@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+
+    {% if username %}
+      <h1>Welcome <b>{{ username }}</b>!</h1>
+    {% else %}
+      <h3>Hello! I didn't catch your name...</h3>
+    {% endif %}
+
+    <button id="logout">Logout</button>
+
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="/static/success.js" type="text/javascript"></script>
+</html>
